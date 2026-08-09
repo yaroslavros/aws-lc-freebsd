@@ -18,7 +18,7 @@
 // AVX-512, so it is gated on MY_ASSEMBLER_IS_TOO_OLD_FOR_ADX_AVX2 rather
 // than MY_ASSEMBLER_IS_TOO_OLD_FOR_512AVX.
 #if !defined(OPENSSL_NO_ASM) &&                                                \
-    (defined(OPENSSL_LINUX) || defined(OPENSSL_APPLE)) &&                      \
+    (defined(OPENSSL_LINUX) || defined(OPENSSL_APPLE) || defined(OPENSSL_FREEBSD)) &&                      \
     ((defined(OPENSSL_X86_64) && !defined(MY_ASSEMBLER_IS_TOO_OLD_FOR_ADX_AVX2)) || \
      defined(OPENSSL_AARCH64))
 #  define EC_NISTP_USE_S2N_BIGNUM

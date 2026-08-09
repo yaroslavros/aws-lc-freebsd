@@ -6,8 +6,8 @@
 
 #include <openssl/target.h>
 
-#if !defined(OPENSSL_NO_ASM) &&				\
-    (defined(OPENSSL_LINUX) || defined(OPENSSL_APPLE))
+#if !defined(OPENSSL_NO_ASM) &&                                \
+    (defined(OPENSSL_FREEBSD) || defined(OPENSSL_LINUX) || defined(OPENSSL_APPLE))
 
 #if defined(OPENSSL_AARCH64)
 // AWS-LC-owned replacement for mldsa/native/aarch64/meta.h that adds a runtime

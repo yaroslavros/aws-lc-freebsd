@@ -5,7 +5,7 @@
 #include <openssl/asm_base.h>
 
 #if !defined(OPENSSL_NO_ASM) && !defined(OPENSSL_SMALL) && \
-    defined(__linux__) && !defined(MY_ASSEMBLER_IS_TOO_OLD_FOR_AVX)
+    (defined(__linux__) || defined(__FreeBSD__)) && !defined(MY_ASSEMBLER_IS_TOO_OLD_FOR_AVX)
 
 // This is the polynomial multiplication function from [HRSS], provided by kind
 // permission of the authors.

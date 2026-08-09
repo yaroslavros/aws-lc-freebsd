@@ -8,7 +8,7 @@
 
 // For now, we only include an AArch64 backend, used on Linux and MacOS systems
 #if !defined(OPENSSL_NO_ASM) &&				\
-    (defined(OPENSSL_LINUX) || defined(OPENSSL_APPLE))
+    (defined(OPENSSL_FREEBSD) || defined(OPENSSL_LINUX) || defined(OPENSSL_APPLE))
 
 #if defined(OPENSSL_AARCH64)
 // AWS-LC-owned replacement for mlkem/native/aarch64/meta.h that adds a runtime
